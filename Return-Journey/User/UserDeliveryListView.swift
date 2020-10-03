@@ -9,7 +9,14 @@ import SwiftUI
 
 struct UserDeliveryListView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack {
+            Text("Hello World!")
+        }.navigationTitle("Your Deliveries")
+        .navigationBarItems(
+            trailing: NavigationLink(destination: UserMapView()) {
+                Image(systemName: "plus")
+            }
+        )
     }
 }
 
