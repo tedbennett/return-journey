@@ -6,41 +6,70 @@
 //
 
 import SwiftUI
+import CoreLocation
 
 struct UserDetailsView: View {
-    @State private var notes = ""
-    @State private var name = ""
-    @State private var weight = ""
-    @State private var height = ""
-    @State private var width = ""
-    @State private var depth = ""
-    @State private var askingPrice = ""
+    var origin: CLLocationCoordinate2D
+    var destination: CLLocationCoordinate2D
+    
+    @Environment(\.presentationMode) var presentation
+    
+    @State private var failedToSubmit = false
+    @StateObject private var viewModel = DeliveryViewModel()
     
     var body: some View {
+        VStack {
         Form {
             List {
                 Section(header: Text("Name")) {
-                TextField("Name", text: $name)
-                }
-                Section(header: Text("Weight")) {
-                TextField("Weight (kg)", text: $weight).keyboardType(.numberPad)
+                    TextField("Name", text: $viewModel.delivery.name)
                 }
                 Section(header: Text("Dimensions (cm)")) {
                     HStack(alignment: .center) {
-                        TextField("Height", text: $height).keyboardType(.numberPad)
-                        TextField("Width", text: $width).keyboardType(.numberPad)
-                        TextField("Depth", text: $depth).keyboardType(.numberPad)
+                        TextField("Height", text: $viewModel.delivery.height).keyboardType(.numberPad)
+                        TextField("Width", text: $viewModel.delivery.width).keyboardType(.numberPad)
+                        TextField("Depth", text: $viewModel.delivery.depth).keyboardType(.numberPad)
                     }
                 }
-                TextField("Estimated Price", text: $askingPrice).keyboardType(.numberPad)
+                Section(header: Text("Estimated Price")) {
+                    TextField("Estimated Price", text: $viewModel.delivery.askingPrice).keyboardType(.numberPad)
+                }
+                Section(header: Text("Notes")) {
+                    TextEditor(text: $viewModel.delivery.notes)
+                }
+                Section(header: Text("Expiry Date")) {
+                    DatePicker("Expiry", selection: $viewModel.delivery.date, displayedComponents: .date)
+                }
             }
-        }.navigationTitle("Item Details")
+            
+        }.onAppear {
+            viewModel.delivery.setCoordinates(origin, destination)
+        }
+        .navigationTitle("Item Details")
+            Button(action: {
+                if !viewModel.handleDoneTapped() {
+                    failedToSubmit = true
+                } else {
+                    failedToSubmit = false
+                    self.presentation.wrappedValue.dismiss()
+                }
+            }, label: {
+                ZStack {
+                    RoundedRectangle(cornerRadius: 25, style: .continuous)
+                        .fill(Color.purple)
+                        .frame(width: 300, height: 50)
+                        
+                    Text("Done").foregroundColor(.white)
+                        .font(.title2)
+                }
+            }).padding(20)
+        }
     }
 }
 
 
-struct UserDetailsView_Previews: PreviewProvider {
-    static var previews: some View {
-        UserDetailsView()
-    }
-}
+//struct UserDetailsView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        UserDetailsView()
+//    }
+//}

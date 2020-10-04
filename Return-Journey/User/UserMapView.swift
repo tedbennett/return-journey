@@ -12,16 +12,16 @@ struct UserMapView: View {
     @State private var start = ""
     @State private var end = ""
     
-    @State private var startMapMarker: MapMarker?
-    @State private var endMapMarker: MapMarker?
+    @State private var startCoordinates: CLLocationCoordinate2D?
+    @State private var endCoordinates: CLLocationCoordinate2D?
     
     var mapMarkers: [Marker] {
         var markers = [Marker]()
-        if startMapMarker != nil {
-            markers.append(Marker(location: startMapMarker!))
+        if startCoordinates != nil {
+            markers.append(Marker(location: MapMarker(coordinate: endCoordinates!)))
         }
-        if endMapMarker != nil {
-            markers.append(Marker(location: endMapMarker!))
+        if endCoordinates != nil {
+            markers.append(Marker(location: MapMarker(coordinate: endCoordinates!)))
         }
         return markers
     }
@@ -106,14 +106,15 @@ struct UserMapView: View {
                             switch selectedTextField {
                                 case .origin:
                                     start = result.placemark.name ?? ""
-                                    startMapMarker = MapMarker(coordinate: result.placemark.coordinate)
+                                    startCoordinates = result.placemark.coordinate
                                 case .destination:
                                     end = result.placemark.name ?? ""
-                                    endMapMarker = MapMarker(coordinate: result.placemark.coordinate)
+                                    endCoordinates = result.placemark.coordinate
                                 case .none: break
                             }
                             if start != "" && end != "" {
                                 selectedTextField = .none
+                                UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
                             }
                         }) {
                             Text(result.placemark.name ?? "Unknown Location")
@@ -123,17 +124,19 @@ struct UserMapView: View {
             }
         }.navigationTitle("Delivery Route")
         .navigationBarItems(
-            trailing: NavigationLink(destination: UserDetailsView()) {
+            trailing: NavigationLink(destination: UserDetailsView(origin: startCoordinates ?? CLLocationCoordinate2D(), destination: endCoordinates ?? CLLocationCoordinate2D())) {
                 HStack {
                     Text("Next")
                     Spacer(minLength: 3)
                     Image(systemName: "chevron.right")
                 }
-            })
+            }.disabled(startCoordinates == nil || endCoordinates == nil)
+        )
         .onAppear {
             if let location = locationManager.location {
                 region = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: location.latitude, longitude: location.longitude), span: MKCoordinateSpan(latitudeDelta: 0.1, longitudeDelta: 0.1))
             }
+            
         }
     }
     
