@@ -11,7 +11,7 @@ import FirebaseAuth
 import FirebaseFirestore
 import FirebaseFirestoreSwift
 
-struct Delivery: Codable {
+struct Delivery: Codable, Identifiable {
     var origin: GeoPoint
     var destination: GeoPoint
     
