@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import FirebaseAuth
 
 struct ContentView: View {
     @State private var needSignIn = true
@@ -16,7 +17,7 @@ struct ContentView: View {
                 NavigationLink(destination: UserDeliveryListView()) {
                     ZStack {
                         RoundedRectangle(cornerRadius: 25, style: .continuous)
-                            .fill(Color.purple)
+                            .fill(Auth.auth().currentUser == nil ? Color.gray : Color.purple)
                             .frame(width: 200, height: 200)
                         VStack {
                             Image(systemName: "shippingbox.fill")
@@ -29,19 +30,29 @@ struct ContentView: View {
                                 .padding(.bottom, 20)
                         }.frame(width: 200, height: 200)
                     }
-                }
+                }.disabled(Auth.auth().currentUser == nil)
                 Spacer()
                 ZStack {
                     RoundedRectangle(cornerRadius: 25, style: .continuous)
-                        .fill(Color.purple)
+                        .fill(Auth.auth().currentUser == nil ? Color.gray : Color.purple)
                         .frame(width: 200, height: 200)
-                    Image(systemName: "paperplane.fill")
-                        .foregroundColor(.white)
-                        .font(.system(size: 100))
-                        .frame(width: 200, height: 200)
-                }
+                    VStack {
+                        Image(systemName: "paperplane.fill")
+                            .foregroundColor(.white)
+                            .font(.system(size: 100))
+                            .padding(20)
+                        Text("Looking to deliver?")
+                            .font(.title2)
+                            .foregroundColor(.white)
+                            .padding(.bottom, 20)
+                    }.frame(width: 200, height: 200)
+                }.disabled(Auth.auth().currentUser == nil)
                 Spacer()
-            }.sheet(isPresented: $needSignIn) {
+            }
+            .onAppear {
+                needSignIn = Auth.auth().currentUser == nil
+            }
+            .sheet(isPresented: $needSignIn) {
                 SignInView(presented: $needSignIn)
             }
         }
