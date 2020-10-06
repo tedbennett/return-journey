@@ -32,6 +32,7 @@ struct ContentView: View {
                     }
                 }.disabled(Auth.auth().currentUser == nil)
                 Spacer()
+                NavigationLink(destination: DeliveryMapView()) {
                 ZStack {
                     RoundedRectangle(cornerRadius: 25, style: .continuous)
                         .fill(Auth.auth().currentUser == nil ? Color.gray : Color.purple)
@@ -46,6 +47,7 @@ struct ContentView: View {
                             .foregroundColor(.white)
                             .padding(.bottom, 20)
                     }.frame(width: 200, height: 200)
+                }
                 }.disabled(Auth.auth().currentUser == nil)
                 Spacer()
             }
