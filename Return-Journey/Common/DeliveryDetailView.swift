@@ -13,6 +13,13 @@ struct DeliveryDetailView: View {
     @State private var region = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: 1.507222, longitude: -0.1275), span: MKCoordinateSpan(latitudeDelta: 0.5, longitudeDelta: 0.5))
     @State private var markers = [IdentifiableMapMarker]()
     
+    var dateFormatter: DateFormatter {
+        let formatter = DateFormatter()
+        formatter.dateStyle = .medium
+        return formatter
+    }
+    
+    
     struct IdentifiableMapMarker: Identifiable {
         var location: MapMarker
         var id = UUID()
@@ -31,6 +38,12 @@ struct DeliveryDetailView: View {
                     Spacer()
                     Text("£\(delivery.askingPrice)")
                 }
+                    HStack {
+                        Text("Expires")
+                        Spacer()
+                        Text(delivery.date, formatter: dateFormatter)
+                    }
+                
                 if delivery.notes != "" {
                     Section(header: Text("Notes")) {
                         Text(delivery.notes)
@@ -43,6 +56,7 @@ struct DeliveryDetailView: View {
             }
         }.onAppear {
             updateMapView()
+            
         }
         .navigationTitle(delivery.name)
     }
@@ -65,8 +79,7 @@ struct DeliveryDetailView: View {
             return
         }
         
-        
-        region = MKCoordinateRegion(center: centrePoint, span: MKCoordinateSpan(latitudeDelta: destinationLat - originLat + 0.1, longitudeDelta: destinationLong - originLong + 0.1))
+        region = MKCoordinateRegion(center: centrePoint, span: MKCoordinateSpan(latitudeDelta: abs(destinationLat - originLat) + 0.1, longitudeDelta: abs(destinationLong - originLong) + 0.1))
     }
 }
 

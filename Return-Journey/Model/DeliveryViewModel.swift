@@ -57,8 +57,7 @@ class DeliveryViewModel: ObservableObject {
     }
     
     func validate() -> Bool {
-        if delivery.notes == "" ||
-            delivery.name == "" ||
+        if delivery.name == "" ||
             Double(delivery.height) == nil ||
             Double(delivery.width) == nil ||
             Double(delivery.depth) == nil ||
