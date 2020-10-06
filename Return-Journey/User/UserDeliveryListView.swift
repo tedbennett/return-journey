@@ -22,7 +22,7 @@ struct UserDeliveryListView: View {
             }
         )
         .onAppear {
-            viewModel.getDeliveries()
+            viewModel.getUsersDeliveries()
         }
     }
 }

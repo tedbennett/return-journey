@@ -19,8 +19,21 @@ class DeliveriesViewModel: ObservableObject {
     
     private var db = Firestore.firestore()
     
-    func getDeliveries() {
+    func getUsersDeliveries() {
         db.collection("delivery").whereField("user", isEqualTo: Auth.auth().currentUser!.uid).getDocuments { (querySnapshot, err) in
+            guard let documents = querySnapshot?.documents else {
+                print("No documents")
+                return
+            }
+            self.deliveries = documents.compactMap { queryDocumentSnapshot -> Delivery? in
+                return try? queryDocumentSnapshot.data(as: Delivery.self)
+                
+            }
+        }
+    }
+    
+    func getAllDeliveries() {
+        db.collection("delivery").getDocuments { (querySnapshot, err) in
             guard let documents = querySnapshot?.documents else {
                 print("No documents")
                 return
