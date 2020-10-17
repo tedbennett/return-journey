@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		9F21A94B252BCB0A00C1A02B /* DeliveryMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F21A94A252BCB0A00C1A02B /* DeliveryMapView.swift */; };
 		9F21A94E252BCC2C00C1A02B /* DeliveryListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F21A94D252BCC2C00C1A02B /* DeliveryListView.swift */; };
+		9F21A9512536E6D200C1A02B /* ChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F21A9502536E6D200C1A02B /* ChatView.swift */; };
+		9F21A9702538D85E00C1A02B /* ChatViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F21A96F2538D85D00C1A02B /* ChatViewModel.swift */; };
+		9F21A9732538E58900C1A02B /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F21A9722538E58900C1A02B /* Message.swift */; };
 		9F244602252A3C82008AA846 /* DeliveryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F244601252A3C82008AA846 /* DeliveryViewModel.swift */; };
 		9F244609252A6838008AA846 /* DeliveryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F244608252A6838008AA846 /* DeliveryModel.swift */; };
 		9F4ECCA2252651FF006F9F27 /* Return_JourneyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F4ECCA1252651FF006F9F27 /* Return_JourneyApp.swift */; };
@@ -36,6 +39,9 @@
 /* Begin PBXFileReference section */
 		9F21A94A252BCB0A00C1A02B /* DeliveryMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeliveryMapView.swift; sourceTree = "<group>"; };
 		9F21A94D252BCC2C00C1A02B /* DeliveryListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeliveryListView.swift; sourceTree = "<group>"; };
+		9F21A9502536E6D200C1A02B /* ChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatView.swift; sourceTree = "<group>"; };
+		9F21A96F2538D85D00C1A02B /* ChatViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewModel.swift; sourceTree = "<group>"; };
+		9F21A9722538E58900C1A02B /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		9F244601252A3C82008AA846 /* DeliveryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeliveryViewModel.swift; sourceTree = "<group>"; };
 		9F244608252A6838008AA846 /* DeliveryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeliveryModel.swift; sourceTree = "<group>"; };
 		9F4ECC9E252651FF006F9F27 /* Return-Journey.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Return-Journey.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -77,6 +83,8 @@
 		9F244606252A3CB4008AA846 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				9F21A96F2538D85D00C1A02B /* ChatViewModel.swift */,
+				9F21A9722538E58900C1A02B /* Message.swift */,
 				9F9991EB252B81A20050A974 /* MapViewModel.swift */,
 				9F9991E1252A7D400050A974 /* DeliveriesViewModel.swift */,
 				9F244601252A3C82008AA846 /* DeliveryViewModel.swift */,
@@ -151,6 +159,7 @@
 		9FD8593C25286C2D00A45C60 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				9F21A9502536E6D200C1A02B /* ChatView.swift */,
 				9F9991E8252B55960050A974 /* MapView.swift */,
 				9F9991E4252A855F0050A974 /* DeliveryDetailView.swift */,
 				9FD8593925286BA100A45C60 /* KeyboardResponder.swift */,
@@ -247,14 +256,17 @@
 				9F9991E9252B55960050A974 /* MapView.swift in Sources */,
 				9F244609252A6838008AA846 /* DeliveryModel.swift in Sources */,
 				9F21A94B252BCB0A00C1A02B /* DeliveryMapView.swift in Sources */,
+				9F21A9732538E58900C1A02B /* Message.swift in Sources */,
 				9FD8593A25286BA200A45C60 /* KeyboardResponder.swift in Sources */,
 				9FD8593725274F8300A45C60 /* LocationManager.swift in Sources */,
 				9FD8593025271F6100A45C60 /* SignInView.swift in Sources */,
 				9FD859332527288100A45C60 /* UserMapView.swift in Sources */,
 				9F9991E5252A855F0050A974 /* DeliveryDetailView.swift in Sources */,
+				9F21A9512536E6D200C1A02B /* ChatView.swift in Sources */,
 				9F21A94E252BCC2C00C1A02B /* DeliveryListView.swift in Sources */,
 				9F9991EC252B81A30050A974 /* MapViewModel.swift in Sources */,
 				9F4ECCA2252651FF006F9F27 /* Return_JourneyApp.swift in Sources */,
+				9F21A9702538D85E00C1A02B /* ChatViewModel.swift in Sources */,
 				9F244602252A3C82008AA846 /* DeliveryViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
