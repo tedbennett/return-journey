@@ -83,11 +83,7 @@
 		9F244606252A3CB4008AA846 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				9F21A96F2538D85D00C1A02B /* ChatViewModel.swift */,
 				9F21A9722538E58900C1A02B /* Message.swift */,
-				9F9991EB252B81A20050A974 /* MapViewModel.swift */,
-				9F9991E1252A7D400050A974 /* DeliveriesViewModel.swift */,
-				9F244601252A3C82008AA846 /* DeliveryViewModel.swift */,
 				9F244608252A6838008AA846 /* DeliveryModel.swift */,
 			);
 			path = Model;
@@ -114,11 +110,9 @@
 		9F4ECCA0252651FF006F9F27 /* Return-Journey */ = {
 			isa = PBXGroup;
 			children = (
-				9F4ECCA3252651FF006F9F27 /* ContentView.swift */,
+				9FD41100253B836600E442DC /* Views */,
+				9FD410FF253B833000E442DC /* View Models */,
 				9F244606252A3CB4008AA846 /* Model */,
-				9FD8593C25286C2D00A45C60 /* Common */,
-				9F4ECCB5252657F6006F9F27 /* Courier */,
-				9F4ECCB4252657E9006F9F27 /* User */,
 				9F4ECCA1252651FF006F9F27 /* Return_JourneyApp.swift */,
 				9FD859292526647F00A45C60 /* Return-Journey.entitlements */,
 				9FD8592325265DBE00A45C60 /* GoogleService-Info.plist */,
@@ -154,6 +148,28 @@
 				9F21A94D252BCC2C00C1A02B /* DeliveryListView.swift */,
 			);
 			path = Courier;
+			sourceTree = "<group>";
+		};
+		9FD410FF253B833000E442DC /* View Models */ = {
+			isa = PBXGroup;
+			children = (
+				9F21A96F2538D85D00C1A02B /* ChatViewModel.swift */,
+				9F9991EB252B81A20050A974 /* MapViewModel.swift */,
+				9F9991E1252A7D400050A974 /* DeliveriesViewModel.swift */,
+				9F244601252A3C82008AA846 /* DeliveryViewModel.swift */,
+			);
+			path = "View Models";
+			sourceTree = "<group>";
+		};
+		9FD41100253B836600E442DC /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				9F4ECCA3252651FF006F9F27 /* ContentView.swift */,
+				9FD8593C25286C2D00A45C60 /* Common */,
+				9F4ECCB5252657F6006F9F27 /* Courier */,
+				9F4ECCB4252657E9006F9F27 /* User */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		9FD8593C25286C2D00A45C60 /* Common */ = {
