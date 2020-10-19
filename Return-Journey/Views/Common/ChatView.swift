@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import FirebaseAuth
 
 struct ChatView: View {
     @ObservedObject var viewModel: ChatViewModel
@@ -57,5 +58,11 @@ struct MessageView: View {
                 .foregroundColor(.white)
                 .cornerRadius(20)
         }
+    }
+}
+
+extension Message {
+    var received: Bool {
+        return sender != Auth.auth().currentUser!.uid
     }
 }

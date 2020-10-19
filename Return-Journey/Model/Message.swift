@@ -11,6 +11,6 @@ import FirebaseFirestoreSwift
 struct Message: Identifiable, Hashable, Codable {
     @DocumentID var id: String?
     var text: String
-    var received: Bool
+    var sender: String
     var sentAt: Date
 }

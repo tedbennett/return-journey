@@ -41,7 +41,7 @@ class ChatViewModel: ObservableObject {
     }
     
     func addMessage(with body: String) {
-        let message = Message(text: body.trimmingCharacters(in: .whitespacesAndNewlines), received: false, sentAt: Date())
+        let message = Message(text: body.trimmingCharacters(in: .whitespacesAndNewlines), sender: Auth.auth().currentUser!.uid, sentAt: Date())
         do {
             let _ = try db.collection("users")
                 .document(Auth.auth().currentUser!.uid)
