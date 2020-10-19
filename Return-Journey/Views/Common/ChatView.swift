@@ -8,8 +8,12 @@
 import SwiftUI
 
 struct ChatView: View {
-    @ObservedObject var viewModel = ChatViewModel()
+    @ObservedObject var viewModel: ChatViewModel
     @State private var text = ""
+    
+    init(chatId: String) {
+        self.viewModel = ChatViewModel(chatId: chatId)
+    }
     
     var body: some View {
         GeometryReader { geometry in
@@ -27,7 +31,9 @@ struct ChatView: View {
                 }
                 HStack {
                     TextField("Message", text: $text).textFieldStyle(RoundedBorderTextFieldStyle())
-                    Button(action: {}, label: {
+                    Button(action: {
+                        viewModel.addMessage(with: text)
+                    }, label: {
                         Text("Send")
                     })
                 }.padding(10)
