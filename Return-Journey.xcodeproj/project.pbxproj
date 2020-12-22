@@ -14,6 +14,7 @@
 		9F21A9732538E58900C1A02B /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F21A9722538E58900C1A02B /* Message.swift */; };
 		9F244602252A3C82008AA846 /* DeliveryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F244601252A3C82008AA846 /* DeliveryViewModel.swift */; };
 		9F244609252A6838008AA846 /* DeliveryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F244608252A6838008AA846 /* DeliveryModel.swift */; };
+		9F35C6E12589191B00703E14 /* SlideOverCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F35C6E02589191B00703E14 /* SlideOverCardView.swift */; };
 		9F4ECCA2252651FF006F9F27 /* Return_JourneyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F4ECCA1252651FF006F9F27 /* Return_JourneyApp.swift */; };
 		9F4ECCA4252651FF006F9F27 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F4ECCA3252651FF006F9F27 /* ContentView.swift */; };
 		9F4ECCA625265202006F9F27 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9F4ECCA525265202006F9F27 /* Assets.xcassets */; };
@@ -21,10 +22,14 @@
 		9F4ECCB225265291006F9F27 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 9F4ECCB125265291006F9F27 /* README.md */; };
 		9F4ECCB725265815006F9F27 /* UserDeliveryListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F4ECCB625265815006F9F27 /* UserDeliveryListView.swift */; };
 		9F6065C0252880B9002505A1 /* UserDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F6065BF252880B9002505A1 /* UserDetailsView.swift */; };
+		9F6112C9258BB2FF00452FB0 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F6112C8258BB2FF00452FB0 /* MapView.swift */; };
 		9F9991E2252A7D400050A974 /* DeliveriesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9991E1252A7D400050A974 /* DeliveriesViewModel.swift */; };
 		9F9991E5252A855F0050A974 /* DeliveryDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9991E4252A855F0050A974 /* DeliveryDetailView.swift */; };
-		9F9991E9252B55960050A974 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9991E8252B55960050A974 /* MapView.swift */; };
+		9F9991E9252B55960050A974 /* RoutePlannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9991E8252B55960050A974 /* RoutePlannerView.swift */; };
 		9F9991EC252B81A30050A974 /* MapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9991EB252B81A20050A974 /* MapViewModel.swift */; };
+		9FD41103253E331E00E442DC /* ChatsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FD41102253E331E00E442DC /* ChatsViewModel.swift */; };
+		9FD41106253E3C3400E442DC /* ChatListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FD41105253E3C3400E442DC /* ChatListView.swift */; };
+		9FD41109253E3D6200E442DC /* Chat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FD41108253E3D6200E442DC /* Chat.swift */; };
 		9FD8591D25265DAE00A45C60 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 9FD8591C25265DAE00A45C60 /* FirebaseAuth */; };
 		9FD8591F25265DAE00A45C60 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 9FD8591E25265DAE00A45C60 /* FirebaseFirestore */; };
 		9FD8592125265DAE00A45C60 /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 9FD8592025265DAE00A45C60 /* FirebaseFirestoreSwift */; };
@@ -34,6 +39,8 @@
 		9FD859332527288100A45C60 /* UserMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FD859322527288100A45C60 /* UserMapView.swift */; };
 		9FD8593725274F8300A45C60 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FD8593625274F8300A45C60 /* LocationManager.swift */; };
 		9FD8593A25286BA200A45C60 /* KeyboardResponder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FD8593925286BA100A45C60 /* KeyboardResponder.swift */; };
+		9FF8E3D6259239FC004C0DC7 /* SlideOverViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FF8E3D5259239FC004C0DC7 /* SlideOverViewModel.swift */; };
+		9FF8E3DB25923A16004C0DC7 /* RouteViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FF8E3DA25923A16004C0DC7 /* RouteViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +51,7 @@
 		9F21A9722538E58900C1A02B /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		9F244601252A3C82008AA846 /* DeliveryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeliveryViewModel.swift; sourceTree = "<group>"; };
 		9F244608252A6838008AA846 /* DeliveryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeliveryModel.swift; sourceTree = "<group>"; };
+		9F35C6E02589191B00703E14 /* SlideOverCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideOverCardView.swift; sourceTree = "<group>"; };
 		9F4ECC9E252651FF006F9F27 /* Return-Journey.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Return-Journey.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F4ECCA1252651FF006F9F27 /* Return_JourneyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Return_JourneyApp.swift; sourceTree = "<group>"; };
 		9F4ECCA3252651FF006F9F27 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -53,10 +61,14 @@
 		9F4ECCB125265291006F9F27 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
 		9F4ECCB625265815006F9F27 /* UserDeliveryListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDeliveryListView.swift; sourceTree = "<group>"; };
 		9F6065BF252880B9002505A1 /* UserDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailsView.swift; sourceTree = "<group>"; };
+		9F6112C8258BB2FF00452FB0 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		9F9991E1252A7D400050A974 /* DeliveriesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeliveriesViewModel.swift; sourceTree = "<group>"; };
 		9F9991E4252A855F0050A974 /* DeliveryDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeliveryDetailView.swift; sourceTree = "<group>"; };
-		9F9991E8252B55960050A974 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
+		9F9991E8252B55960050A974 /* RoutePlannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutePlannerView.swift; sourceTree = "<group>"; };
 		9F9991EB252B81A20050A974 /* MapViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewModel.swift; sourceTree = "<group>"; };
+		9FD41102253E331E00E442DC /* ChatsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatsViewModel.swift; sourceTree = "<group>"; };
+		9FD41105253E3C3400E442DC /* ChatListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatListView.swift; sourceTree = "<group>"; };
+		9FD41108253E3D6200E442DC /* Chat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chat.swift; sourceTree = "<group>"; };
 		9FD8592325265DBE00A45C60 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		9FD8592625265DE300A45C60 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		9FD859292526647F00A45C60 /* Return-Journey.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Return-Journey.entitlements"; sourceTree = "<group>"; };
@@ -64,6 +76,8 @@
 		9FD859322527288100A45C60 /* UserMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserMapView.swift; sourceTree = "<group>"; };
 		9FD8593625274F8300A45C60 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		9FD8593925286BA100A45C60 /* KeyboardResponder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardResponder.swift; sourceTree = "<group>"; };
+		9FF8E3D5259239FC004C0DC7 /* SlideOverViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideOverViewModel.swift; sourceTree = "<group>"; };
+		9FF8E3DA25923A16004C0DC7 /* RouteViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,8 +99,19 @@
 			children = (
 				9F21A9722538E58900C1A02B /* Message.swift */,
 				9F244608252A6838008AA846 /* DeliveryModel.swift */,
+				9FD41108253E3D6200E442DC /* Chat.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		9F35C6DF2589190500703E14 /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				9F9991E8252B55960050A974 /* RoutePlannerView.swift */,
+				9F35C6E02589191B00703E14 /* SlideOverCardView.swift */,
+				9F6112C8258BB2FF00452FB0 /* MapView.swift */,
+			);
+			path = Map;
 			sourceTree = "<group>";
 		};
 		9F4ECC95252651FF006F9F27 = {
@@ -153,8 +178,9 @@
 		9FD410FF253B833000E442DC /* View Models */ = {
 			isa = PBXGroup;
 			children = (
+				9FF8E3D4259239CA004C0DC7 /* Map */,
+				9FD41102253E331E00E442DC /* ChatsViewModel.swift */,
 				9F21A96F2538D85D00C1A02B /* ChatViewModel.swift */,
-				9F9991EB252B81A20050A974 /* MapViewModel.swift */,
 				9F9991E1252A7D400050A974 /* DeliveriesViewModel.swift */,
 				9F244601252A3C82008AA846 /* DeliveryViewModel.swift */,
 			);
@@ -164,6 +190,7 @@
 		9FD41100253B836600E442DC /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				9F35C6DF2589190500703E14 /* Map */,
 				9F4ECCA3252651FF006F9F27 /* ContentView.swift */,
 				9FD8593C25286C2D00A45C60 /* Common */,
 				9F4ECCB5252657F6006F9F27 /* Courier */,
@@ -175,14 +202,24 @@
 		9FD8593C25286C2D00A45C60 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				9FD41105253E3C3400E442DC /* ChatListView.swift */,
 				9F21A9502536E6D200C1A02B /* ChatView.swift */,
-				9F9991E8252B55960050A974 /* MapView.swift */,
 				9F9991E4252A855F0050A974 /* DeliveryDetailView.swift */,
 				9FD8593925286BA100A45C60 /* KeyboardResponder.swift */,
 				9FD8593625274F8300A45C60 /* LocationManager.swift */,
 				9FD8592F25271F6100A45C60 /* SignInView.swift */,
 			);
 			path = Common;
+			sourceTree = "<group>";
+		};
+		9FF8E3D4259239CA004C0DC7 /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				9F9991EB252B81A20050A974 /* MapViewModel.swift */,
+				9FF8E3D5259239FC004C0DC7 /* SlideOverViewModel.swift */,
+				9FF8E3DA25923A16004C0DC7 /* RouteViewModel.swift */,
+			);
+			path = Map;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -266,20 +303,27 @@
 			buildActionMask = 2147483647;
 			files = (
 				9F6065C0252880B9002505A1 /* UserDetailsView.swift in Sources */,
+				9F6112C9258BB2FF00452FB0 /* MapView.swift in Sources */,
 				9F9991E2252A7D400050A974 /* DeliveriesViewModel.swift in Sources */,
+				9F35C6E12589191B00703E14 /* SlideOverCardView.swift in Sources */,
+				9FF8E3D6259239FC004C0DC7 /* SlideOverViewModel.swift in Sources */,
 				9F4ECCB725265815006F9F27 /* UserDeliveryListView.swift in Sources */,
 				9F4ECCA4252651FF006F9F27 /* ContentView.swift in Sources */,
-				9F9991E9252B55960050A974 /* MapView.swift in Sources */,
+				9F9991E9252B55960050A974 /* RoutePlannerView.swift in Sources */,
 				9F244609252A6838008AA846 /* DeliveryModel.swift in Sources */,
 				9F21A94B252BCB0A00C1A02B /* DeliveryMapView.swift in Sources */,
 				9F21A9732538E58900C1A02B /* Message.swift in Sources */,
 				9FD8593A25286BA200A45C60 /* KeyboardResponder.swift in Sources */,
 				9FD8593725274F8300A45C60 /* LocationManager.swift in Sources */,
+				9FD41106253E3C3400E442DC /* ChatListView.swift in Sources */,
+				9FD41103253E331E00E442DC /* ChatsViewModel.swift in Sources */,
 				9FD8593025271F6100A45C60 /* SignInView.swift in Sources */,
 				9FD859332527288100A45C60 /* UserMapView.swift in Sources */,
 				9F9991E5252A855F0050A974 /* DeliveryDetailView.swift in Sources */,
 				9F21A9512536E6D200C1A02B /* ChatView.swift in Sources */,
+				9FF8E3DB25923A16004C0DC7 /* RouteViewModel.swift in Sources */,
 				9F21A94E252BCC2C00C1A02B /* DeliveryListView.swift in Sources */,
+				9FD41109253E3D6200E442DC /* Chat.swift in Sources */,
 				9F9991EC252B81A30050A974 /* MapViewModel.swift in Sources */,
 				9F4ECCA2252651FF006F9F27 /* Return_JourneyApp.swift in Sources */,
 				9F21A9702538D85E00C1A02B /* ChatViewModel.swift in Sources */,
@@ -416,16 +460,18 @@
 				DEVELOPMENT_ASSET_PATHS = "\"Return-Journey/Preview Content\"";
 				DEVELOPMENT_TEAM = 9Y2AMH5S23;
 				ENABLE_PREVIEWS = YES;
+				EXCLUDED_ARCHS = "";
 				INFOPLIST_FILE = "Return-Journey/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = "TedB.Return-Journey";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -439,16 +485,18 @@
 				DEVELOPMENT_ASSET_PATHS = "\"Return-Journey/Preview Content\"";
 				DEVELOPMENT_TEAM = 9Y2AMH5S23;
 				ENABLE_PREVIEWS = YES;
+				EXCLUDED_ARCHS = "";
 				INFOPLIST_FILE = "Return-Journey/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = "TedB.Return-Journey";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};

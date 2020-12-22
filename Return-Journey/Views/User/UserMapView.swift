@@ -9,13 +9,13 @@ import SwiftUI
 import MapKit
 
 struct UserMapView: View {
-    @ObservedObject var viewModel = MapViewModel()
+    @ObservedObject var viewModel = RouteViewModel()
 
     var body: some View {
-        MapView(viewModel: viewModel)
+        RoutePlannerView(routeViewModel: viewModel)
         .navigationTitle("Delivery Route")
         .navigationBarItems(
-            trailing: NavigationLink(destination: UserDetailsView(origin: viewModel.origin ?? CLLocationCoordinate2D(), destination: viewModel.destination ?? CLLocationCoordinate2D())) {
+            trailing: NavigationLink(destination: UserDetailsView(origin: viewModel.getOrigin() ?? CLLocationCoordinate2D(), destination: viewModel.getDestination() ?? CLLocationCoordinate2D())) {
                 HStack {
                     Text("Next")
                     Spacer(minLength: 3)

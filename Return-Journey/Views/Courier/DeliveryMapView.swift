@@ -9,18 +9,18 @@ import SwiftUI
 import CoreLocation
 
 struct DeliveryMapView: View {
-    @ObservedObject var viewModel = MapViewModel()
+    @ObservedObject var viewModel = RouteViewModel()
     var body: some View {
-        MapView(viewModel: viewModel)
+        RoutePlannerView(routeViewModel: viewModel)
             .navigationTitle("Return Journey")
             .navigationBarItems(
-                trailing: NavigationLink(destination: DeliveryListView(origin: viewModel.origin ?? CLLocationCoordinate2D(), destination: viewModel.destination ?? CLLocationCoordinate2D())) {
+                trailing: NavigationLink(destination: DeliveryListView(origin: viewModel.getOrigin() ?? CLLocationCoordinate2D(), destination: viewModel.getDestination() ?? CLLocationCoordinate2D())) {
                     HStack {
                         Text("Next")
                         Spacer(minLength: 3)
                         Image(systemName: "chevron.right")
                     }
-                }.disabled(viewModel.origin == nil || viewModel.destination == nil)
+                }.disabled(viewModel.getOrigin() == nil || viewModel.getDestination() == nil )
             )
     }
 }
